@@ -76,19 +76,25 @@
 // console.log(Directions.down);
 //
 
+// enum ResponseStatus {
+//     Success = 200,
+//     NotFound = 404,
+//     Error = 500
+// }
+//
+//
+// app.get("/', (req, res) => {
+//     if (!req.query.userId) {
+// 			res.status(ResponseStatus.Error).json({})
+//     }
+//     // and so on...
+// 		res.status(ResponseStatus.Success).json({});
+// })
+//
 
-
-enum ResponseStatus {
-    Success = 200,
-    NotFound = 404,
-    Error = 500
+function firstEl<T>(arr: T[]): T {
+  return arr[0];
 }
 
-
-app.get("/', (req, res) => {
-    if (!req.query.userId) {
-			res.status(ResponseStatus.Error).json({})
-    }
-    // and so on...
-		res.status(ResponseStatus.Success).json({});
-})
+console.log(firstEl([1, 2, 4, 6]));
+console.log(firstEl(["Harsh", "Deep", "Random"]));

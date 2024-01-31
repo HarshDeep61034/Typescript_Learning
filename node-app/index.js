@@ -48,30 +48,49 @@
 // userinfo(users);
 //
 //
-var Directions;
-(function (Directions) {
-    Directions["up"] = "UP";
-    Directions["down"] = "Down";
-    Directions["left"] = "Left";
-    Directions["right"] = "Right";
-})(Directions || (Directions = {}));
-function gamelogic(keypressed) {
-    if (keypressed == Directions.up) {
-        console.log("Player Jumped");
-    }
-    else if (keypressed == Directions.down) {
-        console.log("Player Couched");
-    }
-    else if (keypressed == Directions.right) {
-        console.log("Player Moved Forwad!");
-    }
-    else if (keypressed == Directions.left) {
-        console.log("Player Moved Backwards!");
-    }
+// enum Directions {
+//   up = "UP",
+//   down = "Down",
+//   left = "Left",
+//   right = "Right",
+// }
+//
+// function gamelogic(keypressed: Directions) {
+//   if (keypressed == Directions.up) {
+//     console.log("Player Jumped");
+//   } else if (keypressed == Directions.down) {
+//     console.log("Player Couched");
+//   } else if (keypressed == Directions.right) {
+//     console.log("Player Moved Forwad!");
+//   } else if (keypressed == Directions.left) {
+//     console.log("Player Moved Backwards!");
+//   }
+// }
+//
+// gamelogic(Directions.up);
+// gamelogic(Directions.down);
+// gamelogic(Directions.left);
+// gamelogic(Directions.right);
+// console.log(Directions.up);
+// console.log(Directions.down);
+//
+// enum ResponseStatus {
+//     Success = 200,
+//     NotFound = 404,
+//     Error = 500
+// }
+//
+//
+// app.get("/', (req, res) => {
+//     if (!req.query.userId) {
+// 			res.status(ResponseStatus.Error).json({})
+//     }
+//     // and so on...
+// 		res.status(ResponseStatus.Success).json({});
+// })
+//
+function firstEl(arr) {
+    return arr[0];
 }
-gamelogic(Directions.up);
-gamelogic(Directions.down);
-gamelogic(Directions.left);
-gamelogic(Directions.right);
-console.log(Directions.up);
-console.log(Directions.down);
+console.log(firstEl([1, 2, 4, 6]));
+console.log(firstEl(["Harsh", "Deep", "Random"]));
